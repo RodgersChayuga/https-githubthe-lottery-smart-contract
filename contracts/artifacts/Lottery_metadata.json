@@ -40,7 +40,7 @@
 				"inputs": [],
 				"name": "pickWinner",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -108,11 +108,11 @@
 	},
 	"sources": {
 		"contracts/lottery.sol": {
-			"keccak256": "0x9e28afa30c4237617dcb26e28fd53625a75fc646ac311863fc87d86ea6e76a67",
+			"keccak256": "0xa73134633352dfb9bcdef55a6cc15c14cb16758f8c59dad0bb56735b24954575",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6213e16d587b32de88d025a6313a887ad7725b245c8b8b8f3ed933df8174193d",
-				"dweb:/ipfs/QmbYtev473QZ27rpcjznJJVmdNnBdoiRpQbabxqaZnUuQD"
+				"bzz-raw://a8bc16da98aaea6ed7d6b0c563ef31c2d5ca3dc8dc310a5d5d759f82b1ebbd8e",
+				"dweb:/ipfs/Qmdz7cs4mMvnpAToUGVSAoeFUJixcwtFiLHBEmjAHiSnuC"
 			]
 		}
 	},
