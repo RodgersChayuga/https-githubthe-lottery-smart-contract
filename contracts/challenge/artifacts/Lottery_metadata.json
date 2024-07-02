@@ -80,7 +80,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/lottery_smart_contract_ch1.sol": "Lottery"
+			"contracts/challenge/lottery_smart_contract_ch4.sol": "Lottery"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -94,12 +94,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/lottery_smart_contract_ch1.sol": {
-			"keccak256": "0x142a7546329e25fbb55e166926344b6e48c0dd06584c91f609895761d44ec5ff",
+		"contracts/challenge/lottery_smart_contract_ch4.sol": {
+			"keccak256": "0xf0543968caa04a1b479589510a468d5c3810bda4267bf31e641f17c8e7cf2914",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a9e6b3fb51c3a4bf126df877a5eb9417ace546c2a00a58c6d50f4b3f1cbdcc6b",
-				"dweb:/ipfs/QmV67MYSFicuTAGRhmfuL6YBmU11JEEwrTjWcMkkKpgWeP"
+				"bzz-raw://41b730eb69d01fd76770a9ca909ea6b5ac192aaf6bde6bc43e04f2fb8c72a885",
+				"dweb:/ipfs/QmNayAPH31xytPo3wX12nUX9QzJAfXgnqCmWkqZzF3eKvi"
 			]
 		}
 	},
