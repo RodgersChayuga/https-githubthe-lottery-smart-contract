@@ -1,28 +1,35 @@
-REMIX DEFAULT WORKSPACE
+THE LOTTERY SMART CONTRACT
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+This code defines a simple lottery smart contract with some security concerns. Here's a breakdown:
 
-This workspace contains 3 directories:
+1. Setting Up the Lottery:
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+Defines an array players to store participants' addresses (payable for potential transfers).
+Stores the manager's address (manager) who deployed the contract.
 
-SCRIPTS
+2. Entering the Lottery:
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+The receive function is a fallback function that activates when someone sends Ether to the contract.
+Requires an exact amount of 0.1 Ether to enter the lottery.
+Adds the sender's address to the players array.
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+3. Checking Balance:
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+The getBalance function retrieves the contract's balance in wei.
+Only the manager can call this function to prevent unauthorized access.
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+4. Picking a Winner (Unsecure):
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+The pickWinner function allows the manager to select a winner.
+Requires at least 3 players and ensures only the manager calls it.
+Uses an insecure random number generation method (random) based on block data, which miners could potentially manipulate.
+Selects a random index from the players array and assigns the corresponding address as the winner.
+Transfers the entire contract's balance to the winner's address.
+Resets the players array for a new round.
+
+Security Concerns:
+
+Insecure Randomness: The random function uses easily predictable data, making it vulnerable to manipulation by miners who could potentially choose themselves as winners. A secure alternative like Chainlink VRF is recommended.
+Manager Control: The manager has complete control over picking a winner and can potentially choose themselves or exclude participants.
+
+Overall, this is a basic lottery contract but lacks security measures for fair and random winner selection.

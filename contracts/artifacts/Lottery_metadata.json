@@ -63,6 +63,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "random",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "receive"
 			}
@@ -80,7 +93,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/lottery_smart_contract_ch1.sol": "Lottery"
+			"contracts/lottery.sol": "Lottery"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -94,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/lottery_smart_contract_ch1.sol": {
-			"keccak256": "0x142a7546329e25fbb55e166926344b6e48c0dd06584c91f609895761d44ec5ff",
+		"contracts/lottery.sol": {
+			"keccak256": "0xa73134633352dfb9bcdef55a6cc15c14cb16758f8c59dad0bb56735b24954575",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a9e6b3fb51c3a4bf126df877a5eb9417ace546c2a00a58c6d50f4b3f1cbdcc6b",
-				"dweb:/ipfs/QmV67MYSFicuTAGRhmfuL6YBmU11JEEwrTjWcMkkKpgWeP"
+				"bzz-raw://a8bc16da98aaea6ed7d6b0c563ef31c2d5ca3dc8dc310a5d5d759f82b1ebbd8e",
+				"dweb:/ipfs/Qmdz7cs4mMvnpAToUGVSAoeFUJixcwtFiLHBEmjAHiSnuC"
 			]
 		}
 	},
